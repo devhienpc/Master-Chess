@@ -102,6 +102,8 @@ btn_frame.pack(pady=10)
 
 buttons = [
     
+    tk.Button(btn_frame, text="✌ Kéo", width=10, command=lambda: choose("keo")),
+    tk.Button(btn_frame, text="✊ Búa", width=10, command=lambda: choose("bua")),
     tk.Button(btn_frame, text="✋ Bao", width=10, command=lambda: choose("bao")),
 ]
 
