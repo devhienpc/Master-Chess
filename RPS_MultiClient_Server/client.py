@@ -49,7 +49,7 @@ def connect_server():
     room_id = room_entry.get().strip()
 
     if not player_name or not room_id:
-        messagebox.showwarning("Thiếu thông tin", "Nhập tên và số phòng")
+        messagebox.showwarning("Thiếu thông tin!", "Nhập tên và số phòng:")
         return
 
     try:
@@ -80,7 +80,7 @@ def enable_buttons(state):
 
 
 root = tk.Tk()
-root.title("Kéo - Búa - Bao Online")
+root.title("Kéo - Búa - Bao - Online")
 root.geometry("520x560")
 
 tk.Label(root, text="Tên người chơi").pack()
@@ -101,8 +101,7 @@ btn_frame = tk.Frame(root)
 btn_frame.pack(pady=10)
 
 buttons = [
-    tk.Button(btn_frame, text="✌ Kéo", width=10, command=lambda: choose("keo")),
-    tk.Button(btn_frame, text="✊ Búa", width=10, command=lambda: choose("bua")),
+    
     tk.Button(btn_frame, text="✋ Bao", width=10, command=lambda: choose("bao")),
 ]
 
