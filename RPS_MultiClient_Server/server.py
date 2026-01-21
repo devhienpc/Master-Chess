@@ -18,6 +18,33 @@ rooms = {}
 room_choices = {}
 lock = threading.Lock()
 
+def receive():
+    global can_play
+    while True:
+        try:
+            msg = client.recv(1024).decode()
+            if not msg:
+                break
+
+            if "Nhập tên" in msg:
+                client.send((player_name + "\n").encode())
+                continue
+
+            if "Nhập số phòng" in msg:
+                client.send((room_id + "\n").encode())
+                continue
+
+            if msg.startswith("\n--- ROUND"):
+                can_play = True
+                enable_buttons(True)
+
+            text_area.config(state="normal")
+            text_area.insert(tk.END, msg)
+            text_area.see(tk.END)
+            text_area.config(state="disabled")
+
+        except:
+            break
 
 def get_winner(p1, p2):
     if p1 == p2:
@@ -93,7 +120,7 @@ def handle_client(client):
             client.send(start_msg.encode())
             opponent.send(start_msg.encode())
 
-            # Đợi cả 2 người chọn
+            # Đợi cả 2 người Chọn
             while True:
                 with lock:
                     if room_choices[client] and room_choices[opponent]:
@@ -129,11 +156,11 @@ def handle_client(client):
             if round_count == 5:
                 end_msg = "\n🏁 HẾT 5 ROUND!\n"
                 if score1 > score2:
-                    end_msg += f"🏆 {name} THẮNG CHUNG CUỘC\n"
+                    end_msg += f"🏆 {name} BẠN ĐÃ THẮNG CHUNG CUỘC\n"
                 elif score2 > score1:
                     end_msg += f"🏆 {opponent_name} THẮNG CHUNG CUỘC\n"
                 else:
-                    end_msg += "🤝 HÒA CHUNG CUỘC\n"
+                    end_msg += "🤝 BẠN ĐÃ HÒA CHUNG CUỘC\n"
 
                 end_msg += "🔄 Reset điểm – chơi lại!\n"
 
