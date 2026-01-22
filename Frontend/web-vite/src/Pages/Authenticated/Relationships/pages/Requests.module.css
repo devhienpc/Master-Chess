@@ -1,0 +1,11 @@
+.RequestTab {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.RequestTab:hover {
+    background-color: rgba(200,200,200,1);
+}
+
+.RequestTabSelected {
+    background-color: white;
+}

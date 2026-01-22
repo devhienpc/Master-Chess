@@ -1,0 +1,69 @@
+.AlertContext {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.alertItem {
+    background-color: white;
+    pointer-events: auto;
+
+    min-width: 100vw;
+    min-Height: 50px;
+    animation: slide-in 0.5s ease-out;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+
+}
+
+.error {
+    border-top-color: #f44336; /* Red for error */
+}
+
+.warning {
+    border-top-color: #ff9800; /* Orange for warning */
+}
+
+.info {
+    border-top-color: #2196f3; /* Blue for info */
+}
+
+.success {
+    border-top-color: #4caf50; /* Green for success */
+}
+
+.removing {
+    animation: slide-down 0.5s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide-down {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}

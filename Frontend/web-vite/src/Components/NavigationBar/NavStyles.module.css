@@ -1,0 +1,14 @@
+/* Add this to your CSS file */
+.hoverArea {
+    position: fixed;
+    width: 100%;
+    height: 100px; /* This can be adjusted based on your needs */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Higher than the navigation bar to ensure it's always accessible */
+}
+
+/* Shows the hover area only when navigation is hidden */
+.hideNavigationBar + .hoverArea {
+    display: block;
+}

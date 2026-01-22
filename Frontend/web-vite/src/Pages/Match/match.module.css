@@ -1,0 +1,77 @@
+.pageContainer {
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: max-content;
+}
+
+.pageHeader {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    width: 100vw;
+    background-color: lightgrey;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    font-family: Inter;
+}
+
+.mainContent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+
+    padding-block: 25px;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.boardContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.playerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    width: 600px;
+}
+
+.playerUsernameContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.timerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    padding: 10px;
+    border-radius: 10px;
+
+    background-color: darkgray;
+
+    margin-right: 10px;
+}

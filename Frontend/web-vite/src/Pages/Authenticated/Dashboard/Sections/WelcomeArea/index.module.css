@@ -1,0 +1,119 @@
+.WelcomeAreaContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+}
+
+.WelcomeBackMessageContainer {
+    width: 520px;
+    padding: 25px
+}
+
+.WelcomeBackText {
+
+    font-size: 48px;
+    font-weight: 100;
+    font-family: Inter;
+
+}
+
+
+
+.ChartsContainer {
+    width: calc(100vw - 520px);
+    height: max-content;
+
+    padding: 25px;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.Chart {
+    height: 200px;
+    width: 400px;
+}
+
+@media (max-width: 1410px) {
+
+    .Chart {
+        width: 350px;
+    }
+    
+}
+
+@media (max-width: 1300px) {
+
+    .Chart {
+        width: 300px;
+    }
+
+}
+
+
+/* Media query for small screens */
+@media (max-width: 1225px) {
+    .WelcomeAreaContainer {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .WelcomeBackMessageContainer {
+        width: 100vw;
+        padding:0;
+        padding-block: 25px;
+
+    }
+
+    .WelcomeBackText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .ChartsContainer {
+        flex-direction: row;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        padding-block: 25px;
+    }
+
+    .Chart {
+        width: 350px;
+    }
+}
+
+@media (max-width: 740px) {
+
+    .ChartsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Chart {
+        padding-block: 25px;
+    }
+    
+}
+
+@media (max-width: 565px ) {
+    .WelcomeBackText {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 425px ) {
+    .WelcomeBackText {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,11 @@
+PageContainer {
+    background-color: brown;
+}
+
+@media {
+    prefers-color-scheme: light
+} {
+    pageContainer {
+        background-color: sandybrown;
+    }
+}

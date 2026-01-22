@@ -1,0 +1,11 @@
+.NavTab {
+    background-color: lightgrey;
+}
+
+.NavTabSelected {
+    background-color: white;
+}
+
+.NavTab:hover {
+    background-color: rgb(225,225,225);
+}
